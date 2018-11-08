@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>P,R,S - Client</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="logo.jpg" alt ="logo" width="120" height="90"></img>
+  </header>
+  <h1>Rock, Paper, Scissors Game!</h1>
+  <button id = "show_rules_button">Rules</button>
+
+  <div id="feedback"> <p></p>
+  </div>
+
+  <div id="enter_name" class="hidden">
+    <h2>Enter your Name</h2>
+      <input type="text" id="name" style="width: 100px" />
+      <input id="submit_name" type="submit" />
+  </div>
+
+  <div id="rules" class="hidden">
+    <h2>Rules</h2>
+    The game of P, R, S is based on trust, skill and determination.
+    Each player must:
+    <ul>
+      <li>Prepare, with their hand in a fist, to make their move</li>
+      <li>Throw one of three options: rock (fist), paper (flat hand), scissors (two extended fingers)</li>
+      <li>The winner is determined based on these guidelines: rock beats scissors, scissors beats paper, paper beats rock, and the same item is a tie</li>
+    </ul>
+    Official rules are on the <a href = "http://worldrps.com/"> World RPS Society</a> website.
+  </div>
+
+  <div id="throw_choice_div">
+    <h2 id="game_header">Play the Game</h2>
+      <select id = "dropdown">
+        <option value="0"></option>
+        <option value="1">Rock</option>
+        <option value="2">Paper</option>
+        <option value="3">Scissors</option>
+      </select>
+      <button id = "throw_choice">Deploy your weapon!</button>
+  </div>
+
+  <div id="game_results">
+    <img id = "player_image" src = ""></img>
+    <img id = "npc_image" src = ""></img>
+    <h2 id="result_header">Game Results</h2>
+        <p id="player"> </p>
+        <p id="npc"> </p>
+        <p id="winner"> </p>
+        <div id="playimg" ></div> <div id="cpuimg" ></div>
+
+  </div>
+
+  <button id = "show_stats_button">Stats</button>
+  <div id="stats" class="hidden">
+    <h2>Stats</h2>
+      <p id="Total Games"> </p>
+      <p id="Total Wins"> </p>
+      <p id="Win Loss Ratio"> </p>
+      <p id="player_stats"></p>
+      <p id="cpu_stats"></p>
+  </div>
+
+  <button id = "reset">Reset Games</button>
+  <footer>
+    Blythe Dineen, 11/8/2018.
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
